@@ -1,0 +1,8 @@
+[Unit]
+Description=Notify users that Perl modules may need to be updated
+BindsTo=update-triggers.target
+Before=motd-trigger.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/clr-check-perl-modules-motd
