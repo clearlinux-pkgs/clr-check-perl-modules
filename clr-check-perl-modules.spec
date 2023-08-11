@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : clr-check-perl-modules
-Version  : 9
-Release  : 1
-URL      : https://github.com/clearlinux/clr-check-perl-modules/archive/v9/clr-check-perl-modules-9.tar.gz
-Source0  : https://github.com/clearlinux/clr-check-perl-modules/archive/v9/clr-check-perl-modules-9.tar.gz
+Version  : 10
+Release  : 2
+URL      : https://github.com/clearlinux/clr-check-perl-modules/archive/v10/clr-check-perl-modules-10.tar.gz
+Source0  : https://github.com/clearlinux/clr-check-perl-modules/archive/v10/clr-check-perl-modules-10.tar.gz
 Source1  : clr-check-perl-modules-motd.service
 Summary  : No detailed summary available
 Group    : Development/Tools
@@ -54,15 +54,15 @@ services components for the clr-check-perl-modules package.
 
 
 %prep
-%setup -q -n clr-check-perl-modules-9
-cd %{_builddir}/clr-check-perl-modules-9
+%setup -q -n clr-check-perl-modules-10
+cd %{_builddir}/clr-check-perl-modules-10
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1690916443
+export SOURCE_DATE_EPOCH=1691767124
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -75,7 +75,7 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1690916443
+export SOURCE_DATE_EPOCH=1691767124
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/clr-check-perl-modules
 cp %{_builddir}/clr-check-perl-modules-%{version}/COPYING %{buildroot}/usr/share/package-licenses/clr-check-perl-modules/4cc77b90af91e615a64ae04893fdffa7939db84c || :
